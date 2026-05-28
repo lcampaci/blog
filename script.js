@@ -1,6 +1,7 @@
 <script>
-  function toggleMenu() {
+function toggleMenu(){
     const sidebar = document.getElementById("sidebar");
+
     sidebar.classList.toggle("active");
 }
 </script>
