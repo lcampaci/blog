@@ -196,17 +196,12 @@ body{
     box-shadow: 0 0 15px #00ff88;
 }
 
-/* MOBILE TOP */
+  /* MOBILE TOP */
 .mobile-top{
     display: none;
 }
 
-/* RESPONSIVO */
 @media(max-width: 900px){
-
-    body{
-        flex-direction: column;
-    }
 
     .mobile-top{
         display: flex;
@@ -218,27 +213,27 @@ body{
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        z-index: 1000;
-    }
-
-    .mobile-logo{
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #00ff88;
+        width: 100%;
+        z-index: 2000;
     }
 
     .menu-btn{
-        font-size: 1.5rem;
-        cursor: pointer;
+        font-size: 28px;
         color: #00ff88;
+        cursor: pointer;
+        user-select: none;
     }
 
     .sidebar{
-        left: -100%;
-        width: 240px;
-        transition: 0.3s;
-        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 260px;
+        height: 100vh;
+        background: #000;
+        transition: left 0.3s ease;
+        z-index: 1500;
+        padding-top: 80px;
     }
 
     .sidebar.active{
@@ -248,21 +243,22 @@ body{
     .main{
         margin-left: 0;
         width: 100%;
-        padding: 100px 20px 20px;
-    }
-
-    .hero{
-        padding: 25px;
-    }
-
-    .hero h1{
-        font-size: 2rem;
-    }
-
-    .posts{
-        grid-template-columns: 1fr;
+        padding: 90px 20px 20px;
     }
 }
+ 
+     .hero{
+         padding: 25px;
+     }
+ 
+     .hero h1{
+         font-size: 2rem;
+     }
+ 
+     .posts{
+         grid-template-columns: 1fr;
+     }
+ }
 
 /* EFEITO RETRÔ */
 body::after{
