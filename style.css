@@ -196,7 +196,7 @@ body{
     box-shadow: 0 0 15px #00ff88;
 }
 
-  /* MOBILE TOP */
+/* MOBILE TOP */
 .mobile-top{
     display: none;
 }
@@ -245,7 +245,19 @@ body{
         width: 100%;
         padding: 90px 20px 20px;
     }
-}
+
+    .hero{
+        padding: 25px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .posts{
+        grid-template-columns: 1fr;
+    }
+
  
      .hero{
          padding: 25px;
