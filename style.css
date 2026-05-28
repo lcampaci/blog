@@ -239,26 +239,19 @@ body{
     }
 
     /* TOPO MOBILE */
-    .mobile-top{
-        display:flex !important;
-
-        justify-content:space-between;
-        align-items:center;
-
-        position:fixed;
-
-        top:0;
-        left:0;
-
-        width:100%;
-
-        padding:15px 20px;
-
-        background:#000;
-
-        border-bottom:2px solid #00ff88;
-
-        z-index:9999;
+   
+    .mobile-top{ 
+       display:flex !important; 
+       justify-content:space-between;
+       align-items:center; 
+       position:fixed; 
+       top:0; 
+       left:0; 
+       width:100%; 
+       padding:15px 10px 15px 20px; 
+       background:#000; 
+       border-bottom:2px solid #00ff88;
+       z-index:9999; 
     }
 
     .mobile-logo{
