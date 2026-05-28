@@ -37,7 +37,7 @@ body {
    SIDEBAR
 ========================= */
 .sidebar {
-    width: 260px;
+    width: 240px;
     height: 100vh;
     background: #000;
     border-right: 2px solid #00ff88;
@@ -90,7 +90,7 @@ body {
    MAIN
 ========================= */
 .main {
-    margin-left: 260px;
+    margin-left: 250px;
     width: calc(100% - 260px);
     padding: 10px;
 }
@@ -100,7 +100,7 @@ body {
 ========================= */
 .hero {
     border: 2px solid #00ff88;
-    padding: 40px;
+    padding: 30px;
     margin-bottom: 25px;
     background: rgba(0, 255, 136, 0.05);
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
@@ -122,14 +122,11 @@ body {
 ========================= */
 .posts {
     display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 10px;
+    margin-top: -15px;
 }
 
-/* =========================
-   CARD
-========================= */
 .post-card {
     background: #0b0b0b;
     border: 2px solid #00ff88;
@@ -137,11 +134,10 @@ body {
     transition: 0.3s;
     display: flex;
     flex-direction: column;
-    margin-top: -15px;
 }
 
 .post-card:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
     box-shadow:
         0 0 20px rgba(0, 255, 136, 0.5);
 }
@@ -278,7 +274,8 @@ body {
 
     /* MENU LATERAL */
     .sidebar {
-        left: -260px;
+        width: 200px;
+        left: -200px;
         transition: 0.3s;
         padding-top: 20px;
     }
