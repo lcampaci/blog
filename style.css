@@ -1,226 +1,223 @@
-<style>
 /* =========================
    RESET
 ========================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* =========================
    BODY
 ========================= */
-body{
-    background:#050505;
-    color:#00ff88;
-    font-family:Consolas, monospace;
-    display:flex;
-    min-height:100vh;
+body {
+    background: #050505;
+    color: #00ff88;
+    font-family: Consolas, monospace;
+    display: flex;
+    min-height: 100vh;
 }
 
 /* =========================
    SCROLLBAR
 ========================= */
-::-webkit-scrollbar{
-    width:8px;
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-::-webkit-scrollbar-track{
-    background:#000;
+::-webkit-scrollbar-track {
+    background: #000;
 }
 
-::-webkit-scrollbar-thumb{
-    background:#00ff88;
+::-webkit-scrollbar-thumb {
+    background: #00ff88;
 }
 
 /* =========================
    SIDEBAR
 ========================= */
-.sidebar{
-    width:260px;
-    height:100vh;
-    background:#000;
-    border-right:2px solid #00ff88;
-    position:fixed;
-    left:0;
-    top:0;
-    padding:30px 20px;
-    overflow-y:auto;
-    z-index:1500;
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #000;
+    border-right: 2px solid #00ff88;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 20px;
+    overflow-y: auto;
+    z-index: 1500;
 }
 
-.logo{
-    font-size:2rem;
-    font-weight:bold;
-    margin-bottom:40px;
-    color:#00ff88;
-    text-shadow:0 0 10px #00ff88;
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
 }
 
-.menu-title{
-    margin-bottom:20px;
-    color:#00cc66;
+.menu-title {
+    margin-bottom: 20px;
+    color: #00cc66;
 }
 
-.menu{
-    list-style:none;
+.menu {
+    list-style: none;
 }
 
-.menu li{
-    margin-bottom:15px;
+.menu li {
+    margin-bottom: 15px;
 }
 
-.menu a{
-    display:block;
-    text-decoration:none;
-    color:#00ff88;
-    padding:10px;
-    border:1px solid transparent;
-    transition:0.3s;
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: #00ff88;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: 0.3s;
 }
 
-.menu a:hover{
-    background:#00ff88;
-    color:#000;
-    border:1px solid #00ff88;
-    box-shadow:0 0 10px #00ff88;
+.menu a:hover {
+    background: #00ff88;
+    color: #000;
+    border: 1px solid #00ff88;
+    box-shadow: 0 0 10px #00ff88;
 }
 
 /* =========================
    MAIN
 ========================= */
-.main{
-    margin-left:260px;
-    width:calc(100% - 260px);
-    padding:40px;
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 10px;
 }
 
 /* =========================
    HERO
 ========================= */
-.hero{
-    border:2px solid #00ff88;
-    padding:40px;
-    margin-bottom:40px;
-    background:rgba(0,255,136,0.05);
-    box-shadow:0 0 20px rgba(0,255,136,0.2);
+.hero {
+    border: 2px solid #00ff88;
+    padding: 40px;
+    margin-bottom: 25px;
+    background: rgba(0, 255, 136, 0.05);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 
-.hero h1{
-    font-size:2.5rem;
-    margin-bottom:20px;
-    text-shadow:0 0 10px #00ff88;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff88;
 }
 
-.hero p{
-    color:#99ffcc;
-    line-height:1.7;
+.hero p {
+    color: #99ffcc;
+    line-height: 1.7;
 }
 
 /* =========================
    POSTS
 ========================= */
-.posts{
-    display:grid;
+.posts {
+    display: grid;
     grid-template-columns:
-    repeat(auto-fit, minmax(300px,1fr));
-    gap:25px;
+        repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 /* =========================
    CARD
 ========================= */
-.post-card{
-    background:#0b0b0b;
-    border:2px solid #00ff88;
-    overflow:hidden;
-    transition:0.3s;
-    display:flex;
-    flex-direction:column;
+.post-card {
+    background: #0b0b0b;
+    border: 2px solid #00ff88;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    margin-top: -15px;
 }
 
-.post-card:hover{
-    transform:translateY(-5px);
+.post-card:hover {
+    transform: translateY(-5px);
     box-shadow:
-    0 0 20px rgba(0,255,136,0.5);
+        0 0 20px rgba(0, 255, 136, 0.5);
 }
 
 /* =========================
    IMAGE
 ========================= */
-.post-image{
-    height:180px;
-
+.post-image {
+    height: 160px;
     background:
-    linear-gradient(
-        45deg,
-        #001a0d,
-        #00331a
-    );
+        linear-gradient(45deg,
+            #001a0d,
+            #00331a);
 
-    border-bottom:2px solid #00ff88;
+    border-bottom: 2px solid #00ff88;
 }
 
 /* =========================
    CONTENT
 ========================= */
-.post-content{
-    padding:20px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    flex:1;
+.post-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
 }
 
-.tag{
-    width:fit-content;
-    background:#00ff88;
-    color:#000;
-    padding:5px 10px;
-    font-size:0.8rem;
-    font-weight:bold;
+.tag {
+    width: fit-content;
+    background: #00ff88;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
-.post-content h2{
-    color:#00ff88;
-    font-size:1.4rem;
+.post-content h2 {
+    color: #00ff88;
+    font-size: 1.4rem;
 }
 
-.post-content p{
-    color:#99ffcc;
-    line-height:1.6;
+.post-content p {
+    color: #99ffcc;
+    line-height: 1.6;
 }
 
 /* =========================
    FOOTER
 ========================= */
-.post-footer{
-    margin-top:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
+.post-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 /* =========================
    BUTTON
 ========================= */
-.btn{
-    background:transparent;
-    color:#00ff88;
-    border:2px solid #00ff88;
-    padding:10px 15px;
-    cursor:pointer;
-    font-family:inherit;
-    transition:0.3s;
+.btn {
+    background: transparent;
+    color: #00ff88;
+    border: 2px solid #00ff88;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
 }
 
-.btn:hover{
-    background:#00ff88;
-    color:#000;
-    box-shadow:0 0 15px #00ff88;
+.btn:hover {
+    background: #00ff88;
+    color: #000;
+    box-shadow: 0 0 15px #00ff88;
 }
 
 
@@ -228,98 +225,85 @@ body{
    MOBILE
 ========================= */
 
-.mobile-top{
-    display:none;
+.mobile-top {
+    display: none;
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
 
-    body{
-        display:block;
+    body {
+        display: block;
     }
 
     /* TOPO MOBILE */
-   
-    .mobile-top{ 
-       display:flex !important; 
-       justify-content:space-between;
-       align-items:center; 
-       position:fixed; 
-       top:0; 
-       left:0; 
-       width:100%; 
-       padding:15px 10px 15px 20px; 
-       background:#000; 
-       border-bottom:2px solid #00ff88;
-       z-index:9999; 
+
+    .mobile-top {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 10;
+        width: 100%;
+        padding: 15px 10px 15px 20px;
+        background: #000;
+        border-bottom: 2px solid #00ff88;
+        z-index: 9999;
     }
 
-    .mobile-logo{
-        color:#00ff88;
-
-        font-size:1.2rem;
-        font-weight:bold;
-
-        text-shadow:0 0 10px #00ff88;
+    .mobile-logo {
+        color: #00ff88;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-shadow: 0 0 10px #00ff88;
     }
 
-    .menu-btn{
-        width:50px;
-        height:50px;
-
-        display:flex;
-        align-items:center;
-        justify-content:center;
-
-        background:#001a0d;
-
-        color:#00ff88;
-
-        border:2px solid #00ff88;
-        border-radius:8px;
-
-        font-size:32px;
-        font-weight:bold;
-
-        cursor:pointer;
-
+    .menu-btn {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #001a0d;
+        color: #00ff88;
+        border: 2px solid #00ff88;
+        border-radius: 8px;
+        font-size: 32px;
+        font-weight: bold;
+        cursor: pointer;
         box-shadow:
-        0 0 10px #00ff88,
-        inset 0 0 10px rgba(0,255,136,0.3);
+            0 0 10px #00ff88,
+            inset 0 0 10px rgba(0, 255, 136, 0.3);
     }
 
     /* MENU LATERAL */
-    .sidebar{
-        left:-260px;
-
-        transition:0.3s;
-
-        padding-top:90px;
+    .sidebar {
+        left: -260px;
+        transition: 0.3s;
+        padding-top: 20px;
     }
 
-    .sidebar.active{
-        left:0;
+    .sidebar.active {
+        left: 0;
     }
 
     /* CONTEÚDO */
-    .main{
-        margin-left:0;
-
-        width:100%;
-
-        padding-top:100px;
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 90px;
     }
 
-    .posts{
-        grid-template-columns:1fr;
+    .posts {
+        grid-template-columns: 1fr;
     }
 
-    .hero{
-        padding:25px;
+    .hero {
+        padding: 25px;
     }
 
-    .hero h1{
-        font-size:2rem;
+    .hero h1 {
+        font-size: 2rem;
     }
 }
 
@@ -327,20 +311,16 @@ body{
 /* =========================
    CRT EFFECT
 ========================= */
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
     background:
-    repeating-linear-gradient(
-        to bottom,
-        rgba(0,255,136,0.03),
-        rgba(0,255,136,0.03) 1px,
-        transparent 1px,
-        transparent 3px
-    );
+        repeating-linear-gradient(to bottom,
+            rgba(0, 255, 136, 0.03),
+            rgba(0, 255, 136, 0.03) 1px,
+            transparent 1px,
+            transparent 3px);
 
-    pointer-events:none;
+    pointer-events: none;
 }
-</style>
-
