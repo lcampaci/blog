@@ -278,27 +278,29 @@ body{
     }
 
     /* HEADER MOBILE */
-    .mobile-top{
-        display:flex;
+    ```css id="v7mq2v"
+.mobile-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-        justify-content:space-between;
-        align-items:center;
+    background:#000;
 
-        background:#000;
+    padding:15px 20px;
 
-        border-bottom:2px solid #00ff88;
+    border-bottom:2px solid #00ff88;
 
-        padding:15px 20px;
+    position:fixed;
 
-        position:fixed;
+    top:0;
+    left:0;
 
-        top:0;
-        left:0;
+    width:100%;
 
-        width:100%;
+    z-index:3000;
+}
+```
 
-        z-index:3000;
-    }
 
     .mobile-logo{
         color:#00ff88;
@@ -307,15 +309,39 @@ body{
         font-weight:bold;
     }
 
-    .menu-btn{
-        color:#00ff88;
+.menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        font-size:30px;
+    width:50px;
+    height:50px;
 
-        cursor:pointer;
+    font-size:32px;
+    font-weight:bold;
 
-        user-select:none;
-    }
+    color:#00ff88;
+
+    border:2px solid #00ff88;
+    border-radius:8px;
+
+    background:#001a0d;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 10px #00ff88,
+    inset 0 0 10px rgba(0,255,136,0.3);
+
+    transition:0.3s;
+}
+
+.menu-btn:hover{
+    background:#00ff88;
+    color:#000;
+
+    transform:scale(1.05);
+}
 
     /* SIDEBAR MOBILE */
     .sidebar{
