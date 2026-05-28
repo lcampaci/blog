@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog</title>
+</head>
+<body>
+
+  <!-- MOBILE HEADER -->
+  <div class="mobile-top">
+    <div class="mobile-logo">BLOG DIÁRIO</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo">BLOG</div>
+
+    <div class="menu-title">Tópicos</div>
+
+    <ul class="menu">
+      <li><a href="#">Informática</a></li>
+      <li><a href="#">Filmes e Séries</a></li>
+      <li><a href="#">Tutoriais</a></li>
+      <li><a href="#">Games</a></li>
+	  <li><a href="#">Curiosidades</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <section class="hero">
+      <h1>Bem-vindo ao Blog Diário</h1>
+      <p>
+        Conteúdos lançados diariamente sobre Informática em geral, cultura pop, tutoriais e muito mais.
+      </p>
+    </section>
+
+    <section class="posts">
+
+      <!-- POST -->
+      <article class="post-card">
+        <div class="post-image"></div>
+
+        <div class="post-content">
+          <span class="tag">Informática</span>
+
+          <h2>As tendências da IA em 2026</h2>
+
+          <p>
+            ...
+          </p>
+
+          <div class="post-footer">
+            <span>28 Maio 2026</span>
+            <button class="btn">Ler mais</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- POST -->
+      <article class="post-card">
+        <div class="post-image"></div>
+
+        <div class="post-content">
+          <span class="tag">Tv, Filmes e Séries</span>
+
+          <h2>...</h2>
+
+          <p>
+            ...
+          </p>
+
+          <div class="post-footer">
+            <span>25 Maio 2026</span>
+            <button class="btn">Ler mais</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- POST -->
+      <article class="post-card">
+        <div class="post-image"></div>
+
+        <div class="post-content">
+          <span class="tag">Curiosidades</span>
+
+          <h2>Proteja seus dados online</h2>
+
+          <p>
+            ...
+          </p>
+
+          <div class="post-footer">
+            <span>22 Maio 2026</span>
+            <button class="btn">Ler mais</button>
+          </div>
+        </div>
+      </article>
+	  
+	  <article class="post-card">
+        <div class="post-image"></div>
+
+        <div class="post-content">
+          <span class="tag">Curiosidades</span>
+
+          <h2>Proteja seus dados online</h2>
+
+          <p>
+            ...
+          </p>
+
+          <div class="post-footer">
+            <span>22 Maio 2026</span>
+            <button class="btn">Ler mais</button>
+          </div>
+        </div>
+      </article>
+	  
+	  <article class="post-card">
+        <div class="post-image"></div>
+
+        <div class="post-content">
+          <span class="tag">Curiosidades</span>
+
+          <h2>Proteja seus dados online</h2>
+
+          <p>
+            ...
+          </p>
+
+          <div class="post-footer">
+            <span>22 Maio 2026</span>
+            <button class="btn">Ler mais</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <script>
+    function toggleMenu(){
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
