@@ -274,8 +274,8 @@ body {
 
     /* MENU LATERAL */
     .sidebar {
-        width: 200px;
-        left: -200px;
+        width: 220px;
+        left: -220px;
         transition: 0.3s;
         padding-top: 20px;
     }
